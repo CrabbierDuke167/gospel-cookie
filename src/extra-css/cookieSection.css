@@ -1,0 +1,53 @@
+.cookie-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* ----- CLICK TEXT (BEFORE CRACK) ----- */
+.click-text {
+    font-family: "SN Pro", sans-serif;
+    color: #5d6980;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.click-text > span {
+    font-family: "SN Pro", sans-serif;
+    color: #5d6980;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.click-text:hover {
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.click-text > span:hover {
+    color: #866206;
+    transform: scale(1.1);
+}
+
+/* ---- FORTUNE WRAPPER (LIFTS UP AND OVERLAPS COOKIE) ---- */
+
+.fortune-wrapper {
+    margin-top: 8px;              /* smaller gap so it can overlap nicely */
+    opacity: 0;
+    transform: translateY(30px);  /* starts lower */
+    pointer-events: none;
+    transition: var(--transition);
+    position: relative;
+    z-index: 5;                   /* sits above cookie */
+}
+
+/* When it appears → moves UP and slightly over cookie */
+.fortune-wrapper.show {
+    opacity: 1;
+    transform: translateY(-40px); /* LIFTS UP OVER COOKIE */
+    pointer-events: auto;
+}

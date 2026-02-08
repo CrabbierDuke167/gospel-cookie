@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+:root {
+  --font-size: 16px;
+  --background: #e6f4fe;
+  --transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+  background: var(--background);
+  font-family: "Cormorant Garamond", serif;
+}

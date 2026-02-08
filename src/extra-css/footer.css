@@ -1,0 +1,77 @@
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    gap: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer-wish {
+    font-size: var(--font-size);
+    color: #5d6980;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    pointer-events: none;
+}
+
+.copy-right, .github-link {
+    font-size: var(--font-size);
+    color: #263042;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: "Cormorant Garamond", serif;
+    transition: var(--transition);
+}
+
+.copy-right:hover, .github-link:hover {
+    color: #5d6980;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* Biggies */
+@media (max-width: 1700px){
+    .footer-wish {
+        font-size: var(--font-size);
+    }
+    .copy-right, .github-link {
+        font-size:14px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .footer-wish {
+        font-size: 18px;
+    }
+    .copy-right, .github-link {
+        font-size:var(--font-size);
+    }
+}
+
+/* Mobile */
+@media (max-width: 475px) {
+    .footer-wish {
+        font-size: 10px;
+    }
+    .copy-right, .github-link {
+        font-size: 10px;
+    }
+}
+
+/* Shittier Mobiles */
+@media (max-width: 260px) {
+    .footer-wish {
+        font-size: 8px;
+    }
+    .copy-right, .github-link {
+        font-size: 8px;
+    }
+}

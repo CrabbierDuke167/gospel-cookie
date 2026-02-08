@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Divine Morsels</title>
+    <link rel="icon" type="image/jpeg" href="/src/assets/favicon.png" />
+    <link rel="preload" href="/src/assets/fonts/CormorantGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="description" content="Gospel Cookie - Get your daily inspirational verse." />
+    <meta name="theme-color" content="#fafbff" />
+    <style>
+      html {
+        touch-action: manipulation;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener('wheel', function(e) {
+        if (e.ctrlKey) e.preventDefault();
+      }, { passive: false });
+
+      window.addEventListener('touchmove', function(e) {
+        if (e.scale && e.scale !== 1) e.preventDefault();
+      }, { passive: false });
+
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function(e) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) e.preventDefault();
+        lastTouchEnd = now;
+      }, false);
+    </script>
+  </body>
+</html>

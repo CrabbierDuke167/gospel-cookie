@@ -1,0 +1,161 @@
+.box {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid #eabe6b 2px;
+    border-radius: 10px;
+    padding: 1.5rem 3.5rem;
+    margin: 10px auto;
+    background-color: #fafbff;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.fortune-text {
+    font-size: 1.3rem;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-wrap: wrap;
+}
+
+.fortune-ref {
+    font-size: 1.1rem;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #761d0c;
+    margin-bottom: 1rem;
+}
+
+.reset {
+    display: flex;
+    gap: 10px;
+    border: black solid 1px;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #0f172b;
+    transition: var(--transition);
+}
+
+.reset-text , .reset-icon {
+    color: #fbfbfc;
+    font-size: 0.8rem;
+    font-family: "Cormorant Garamond", serif;
+    align-self: center;
+    transition: var(--transition);
+}
+
+.reset:hover {
+    background-color: #eabe6b;
+    color: #0f172b;
+    border: solid #eabe6b 1px;
+}
+
+.reset:hover .reset-icon {
+    transform: rotate(360deg); /* full spin */
+}
+
+.box:hover {
+    border: solid #eabe6b 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* MEDIA QUERIES */
+/* Biggies */
+@media (max-width: 1700px) {
+.box {
+    width: 88%;
+    height: 100%;
+    transform: translateY(-45%);
+}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .box {
+    padding: 1.2rem;
+    width: 80%;
+    transform: translateY(-80%);
+  }
+  .fortune-text {
+    font-size: 1rem;
+  }
+  .fortune-ref {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 475px) {
+  .box {
+    padding: 0.6rem;
+    width: 65%;
+    transform: translateY(-85%);
+  }
+  .fortune-text {
+    font-size: 0.78rem;
+  }
+  .fortune-ref {
+    font-size: 0.55rem;
+  }
+  .reset {
+    display: flex;
+    gap: 8px;
+    border: black solid 1px;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #0f172b;
+    transition: var(--transition);
+}
+
+  .reset-text , .reset-icon {
+    color: #fbfbfc;
+    font-size: 0.5rem;
+    font-family: "Cormorant Garamond", serif;
+    align-self: center;
+    transition: var(--transition);
+}
+
+}
+
+/* Shittier Mobiles */
+@media (max-width: 260px) {
+  .box {
+    padding: 0.6rem;
+    width: 75%;
+    transform: translateY(-65%);
+  }
+  .fortune-text {
+    font-size: 0.78rem;
+  }
+  .fortune-ref {
+    font-size: 0.55rem;
+    font-weight: bold;
+  }
+  .reset {
+    display: flex;
+    gap: 6px;
+    border: black solid 1px;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #0f172b;
+    transition: var(--transition);
+}
+
+  .reset-text , .reset-icon {
+    color: #fbfbfc;
+    font-size: 0.4rem;
+    font-family: "Cormorant Garamond", serif;
+    align-self: center;
+    transition: var(--transition);
+}  
+}
